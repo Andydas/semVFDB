@@ -1,0 +1,59 @@
+body{
+    background-image: url("../imgs/pozadie.png");
+    background-size: cover;
+}
+.transparent {
+    background-color: rgba(0,0,0,0) !important;
+}
+.jumbotron {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+.navbar{
+    border-bottom: solid lightgrey 1px;
+    padding-bottom: 0px;
+    margin-bottom: 8px;
+}
+.sedePozadie {
+    background-color: #d7d7d7;
+}
+#carouselHome .carousel-inner{
+    height: 500px;
+}
+#carouselHome .carousel-item img{
+    object-fit: cover;
+    height: 500px;
+    width: 100%;
+}
+.prihlasenie{
+    margin: auto;
+    padding-top: 100px;
+}
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.card .btn {
+    color: white;
+}
+
+.mazanie{
+    text-align: right;
+}
+
+.upravovanie{
+    text-align: left;
+}
+.btn{
+    color: white !important;
+}
+
+.card-footer{
+    border-top:0;
+}
