@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -24,10 +25,15 @@ Route::get('/movie/horror', [MovieController::class, 'horror'])-> name('movie.ho
 Route::get('/movie/success', [MovieController::class, 'success'])-> name('movie.success');
 Route::resource('movie', MovieController::class);
 
+Route::get('/review/myreviews', [ReviewController::class, 'myReviews'])-> name('review.myreviews');
+Route::resource('review', ReviewController::class);
+
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/movie/{movie}/edit', [MovieController::class, 'edit'])-> name('movie.edit');
     Route::get('/movie/{movie}/destroy', [MovieController::class, 'destroy'])-> name('movie.destroy');
     Route::get('/movie/create', [MovieController::class, 'create'])-> name('movie.create');
+    Route::get('/review/{movie}/create', [ReviewController::class, 'create'])-> name('review.create');
+    Route::get('/review/{review}/destroy', [ReviewController::class, 'destroy'])-> name('review.destroy');
 });
 
 Route::resource('user', UserController::class);

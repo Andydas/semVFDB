@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\DB;
 
 class MovieController extends Controller
 {
+    public function __construct()
+    {
+        $this->authorizeResource(Movie::class, 'movie');
+    }
 
     public function akcny()
     {
@@ -38,7 +42,8 @@ class MovieController extends Controller
      */
     public function index()
     {
-
+        $movies = Movie::all();
+        return view('movie.list', ['movies' => $movies,'zaner' => 'vsetky']);
     }
 
     /**
@@ -65,7 +70,8 @@ class MovieController extends Controller
         $request->validate([
             'nazov' => 'required|min:3|unique:movies',
             'popis' => 'required|min:8',
-            'zaner' => 'required'
+            'zaner' => 'required|in:'. implode(',', ['akcny','scifi','horror','komedia','janko',]),
+            'img' => 'nullable|active_url'
         ]);
         $movie = Movie::create($request->all());
         $movie->save();
@@ -104,7 +110,7 @@ class MovieController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function update(Request $request, Movie $movie)
     {
@@ -114,18 +120,18 @@ class MovieController extends Controller
             'zaner' => 'required'
         ]);
         $movie->update($request->all());
-        return view('movie.success', [ 'typ' => 'edit', 'movie' => $movie]);
+        return view('success', ['objekt' => 'movie', 'typ' => 'edit', 'movie' => $movie]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function destroy(Movie $movie)
     {
         $movie->delete();
-        return view('movie.success', [ 'typ' => 'destroy', 'movie' => $movie]);
+        return view('success', [ 'typ' => 'destroy', 'model' => $movie]);
     }
 }

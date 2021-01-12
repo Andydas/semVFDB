@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7aeaac2-1f1e-44d0-941d-b3e86b44b8ee" name="Default Changelist" comment="" />
+    <list default="true" id="b7aeaac2-1f1e-44d0-941d-b3e86b44b8ee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/27366aa2-788b-4c26-b16c-f6fd2b7b1c94.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/27366aa2-788b-4c26-b16c-f6fd2b7b1c94.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Movie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/movie/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +46,9 @@
         <option value="composer.json" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -141,20 +173,21 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/movie" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/review" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\movie" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views" />
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\user" />
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\movie" />
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\homepage" />
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\movie\common" />
-      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\public\imgs" />
-      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\public\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\review" />
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\movie" />
     </key>
   </component>
   <component name="RunManager">
@@ -173,11 +206,23 @@
       <updated>1610278756569</updated>
       <workItem from="1610278757699" duration="9581000" />
       <workItem from="1610364165563" duration="18163000" />
+      <workItem from="1610388377530" duration="30599000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="352" y="381" key="#SQL_Dialects" timestamp="1610371148818">
@@ -196,9 +241,10 @@
       <screen x="36" y="0" width="1884" height="1080" />
     </state>
     <state x="715" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610302037310" />
-    <state x="708" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610302417996">
-      <screen x="36" y="0" width="1884" height="1080" />
+    <state x="705" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610469114873">
+      <screen x="32" y="0" width="1888" height="1080" />
     </state>
+    <state x="705" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610469114873" />
     <state x="708" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610302417996" />
     <state x="752" y="452" key="ComposerInitDialogKey" timestamp="1610386183825">
       <screen x="32" y="0" width="1888" height="1080" />
@@ -216,20 +262,28 @@
       <screen x="36" y="0" width="1884" height="1080" />
     </state>
     <state x="682" y="263" key="NewPhpClassDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610298841456" />
-    <state x="810" y="463" key="NewPhpFileDialog" timestamp="1610380639087">
+    <state x="810" y="463" key="NewPhpFileDialog" timestamp="1610476434721">
       <screen x="32" y="0" width="1888" height="1080" />
     </state>
-    <state x="810" y="463" key="NewPhpFileDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610380639087" />
+    <state x="810" y="463" key="NewPhpFileDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610476434721" />
     <state x="812" y="463" key="NewPhpFileDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610298828351" />
-    <state x="500" y="294" width="880" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610374143816">
+    <state x="875" y="417" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1610457261232">
       <screen x="32" y="0" width="1888" height="1080" />
     </state>
-    <state x="500" y="294" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610374143816" />
+    <state x="875" y="417" key="com.intellij.database.actions.DdlActions$CreateObject$1/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610457261232" />
+    <state x="927" y="427" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1610460840346">
+      <screen x="32" y="0" width="1888" height="1080" />
+    </state>
+    <state x="927" y="427" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610460840346" />
+    <state x="277" y="283" width="1313" height="698" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610461397586">
+      <screen x="32" y="0" width="1888" height="1080" />
+    </state>
+    <state x="277" y="283" width="1313" height="698" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610461397586" />
     <state x="503" y="294" width="880" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610303460779" />
-    <state x="638" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1610386181868">
+    <state x="638" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1610472608880">
       <screen x="32" y="0" width="1888" height="1080" />
     </state>
-    <state x="638" y="235" width="674" height="678" key="search.everywhere.popup/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610386181868" />
+    <state x="638" y="235" width="674" height="678" key="search.everywhere.popup/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610472608880" />
     <state x="641" y="235" width="672" height="678" key="search.everywhere.popup/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610297684822" />
   </component>
 </project>

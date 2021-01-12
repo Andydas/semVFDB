@@ -43,34 +43,27 @@
                             <a class="dropdown-item" href="{{route('movie.horror')}}">Horrory</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Seriály
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="?c=Show&a=komedia">Komédie</a>
-                            <a class="dropdown-item" href="?c=Show&a=fantasy">Fantasy</a>
-                            <a class="dropdown-item" href="?c=Show&a=drama">Drama</a>
-                        </div>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('review.index')}}">{{__('Recenzie')}}<span class="sr-only">(current)</span></a>
+                        </li>
 
                     @if(Auth::user() != null && Auth::user()->role == 'admin')
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pridaj
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{{route('movie.create')}}">Film</a>
-                            <a class="dropdown-item" href="?c=Show&a=add">Seriál</a>
-                        </div>
-                    </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Pridaj
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{{route('movie.create')}}">Film</a>
+                                <a class="dropdown-item" href="?c=Show&a=add">Seriál</a>
+                            </div>
+                        </li>
                     @endif
                     @if(Auth::user() != null && Auth::user()->role == 'admin')
-                    <li class="nav-item">
-                        @auth
-                            <a class="nav-link" href="{{route('user.index')}}">{{__('Správa užívateľov')}}</a>
-                        @endauth
-                    </li>
+                        <li class="nav-item">
+                            @auth
+                                <a class="nav-link" href="{{route('user.index')}}">{{__('Správa užívateľov')}}</a>
+                            @endauth
+                        </li>
                     @endif
                 </ul>
 
@@ -95,7 +88,8 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="?c=Show&a=komedia">Moje recenzie</a>
+                                <a class="dropdown-item" href="{{route('review.myreviews')}}">Moje recenzie</a>
+
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

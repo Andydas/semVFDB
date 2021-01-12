@@ -17,15 +17,24 @@
             <h1 class="display-4"> {{ __('Horrorove filmy ') }}</h1>
             <p class="lead">Top horrorove filmy podľa hodnotenia užívateľov.</p>
             <hr class="my-4">
+        @elseif ($zaner == 'vsetky')
+            <h1 class="display-4"> {{ __('Vsetky filmy ') }}</h1>
+            <p class="lead">Top filmy podľa hodnotenia užívateľov.</p>
+            <hr class="my-4">
         @endif
     </div>
 
+    <?php
+    $inc = 0;
+    ?>
     @foreach ($movies as $movie)
+        @if($inc%2 == 0)
         <div class="row">
+            @endif
         <div class="card sedePozadie mb-3 mr-2 ml-2 col-xs-12 col-sm-12 col-md-6 col-lg-6" style="max-width: 540px;">
             <div class="row no-gutters h-100">
                 <div class="col-md-4 d-flex align-items-center">
-                    <img src="{{ $movie->img }}?>" class="card-img">
+                    <img src="{{ $movie->img }}" class="card-img">
                 </div>
                 <div class="col-md-8">
                     <div class="h-100 d-flex flex-column">
@@ -33,22 +42,35 @@
                             <div class="d-flex flex-column">
                                 <h5 class="card-title">{{$movie->nazov}}</h5>
                                 <p class="card-text">{{$movie->popis}}</p>
+                                <br>
+                                <p class="card-text">Žáner: {{$movie->zaner}}</p>
                             </div>
                         </div>
 
+
                         <div class="card-footer bg-transparent row">
+                            <div class="pridajRecenziu col-6">
+                                <a href=" {{ route('review.create', $movie->id) }}" class="btn btn-dark" role="button">REcenzia</a>
+                            </div>
+                            @can('create', App\Models\Movie::class)
                             <div class="upravovanie col-6">
                                 <a href=" {{ route('movie.edit', $movie->id) }}" class="btn btn-dark" role="button">Upraviť</a>
                             </div>
                             <div class="mazanie col-6">
                                 <a href="{{ route('movie.destroy', $movie->id) }}" class="btn btn-dark" role="button">Zmazať</a>
                             </div>
+                            @endcan
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
+        <?php
+            $inc++;
+        ?>
+            @if($inc%2 == 0)
+                </div >
+                    @endif
     @endforeach
 </div>
 @endsection
