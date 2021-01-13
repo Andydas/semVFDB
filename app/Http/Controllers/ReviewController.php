@@ -6,16 +6,28 @@ use App\Models\Movie;
 use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ReviewController extends Controller
 {
 
-    public function myReviews(){
+    public function myReviews(Request $request){
+        // $movies = DB::table('movies')->where('zaner', 'akcny')->orderBy('nazov')->paginate(4);
         //$reviews = Review::all()->pluck(Auth::user()->id);
-        $reviews = Auth::user()->reviews;
+        //$reviews = DB::table('reviews')->where('user_id', $request->user()->id)->orderBy('id')->paginate(4);
+       // dd($reviews);
+        $reviews = $request->user()->reviews;
         return view('review.list', ['reviews' => $reviews]);
     }
 
+    public function detail(Review $review){
+        return view('review.detail', $review);
+    }
+
+    public function movieReviews(Movie $movie){
+        $reviews = $movie->reviews();
+        return view('review.list', ['reviews' => $reviews]);
+    }
 
     /**
      * Display a listing of the resource.

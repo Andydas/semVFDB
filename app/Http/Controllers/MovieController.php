@@ -15,26 +15,39 @@ class MovieController extends Controller
 
     public function akcny()
     {
-        $movies = DB::select('select * from movies where zaner = :zaner', ['zaner' => 'akcny']);
+        $movies = DB::table('movies')->where('zaner', 'akcny')->orderBy('nazov')->paginate(4);
         return view('movie.list', ['movies' => $movies, 'zaner' => 'akcny']);
     }
 
     public function scifi()
     {
-        $movies = DB::select('select * from movies where zaner = :zaner', ['zaner' => 'scifi']);
+        $movies = DB::table('movies')->where('zaner', 'scifi')->orderBy('nazov')->paginate(4);
         return view('movie.list', ['movies' => $movies, 'zaner' => 'scifi']);
     }
 
     public function horror()
     {
-        $movies = DB::select('select * from movies where zaner = :zaner', ['zaner' => 'horror']);
+        $movies = DB::table('movies')->where('zaner', 'horror')->orderBy('nazov')->paginate(4);
         return view('movie.list', ['movies' => $movies, 'zaner' => 'horror']);
+    }
+    public function komedia()
+    {
+        $movies = DB::table('movies')->where('zaner', 'komedia')->orderBy('nazov')->paginate(4);
+        return view('movie.list', ['movies' => $movies, 'zaner' => 'komedia']);
+    }
+    public function fantasy()
+    {
+        $movies = DB::table('movies')->where('zaner', 'fantasy')->orderBy('nazov')->paginate(4);
+        return view('movie.list', ['movies' => $movies, 'zaner' => 'fantasy']);
     }
 
     public function success(){
         return view('movie.success');
     }
 
+    public function detail(Movie $movie){
+        return view('movie.detail', ['movie' => $movie]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -42,7 +55,7 @@ class MovieController extends Controller
      */
     public function index()
     {
-        $movies = Movie::all();
+        $movies = DB::table('movies')->orderBy('nazov')->paginate(4);
         return view('movie.list', ['movies' => $movies,'zaner' => 'vsetky']);
     }
 
@@ -70,10 +83,15 @@ class MovieController extends Controller
         $request->validate([
             'nazov' => 'required|min:3|unique:movies',
             'popis' => 'required|min:8',
-            'zaner' => 'required|in:'. implode(',', ['akcny','scifi','horror','komedia','janko',]),
+            'zaner' => 'required|in:'. implode(',', ['akcny','scifi','horror','komedia','fantasy',]),
             'img' => 'nullable|active_url'
         ]);
-        $movie = Movie::create($request->all());
+
+
+        $movie = Movie::make($request->all());
+        if ($request->input('img') == '')
+            $movie->img = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.svg.png';
+
         $movie->save();
         return view('movie.success', [ 'typ' => 'create', 'movie' => $movie]);
         //return redirect()->route('movie.success');
@@ -115,12 +133,12 @@ class MovieController extends Controller
     public function update(Request $request, Movie $movie)
     {
         $request->validate([
-            'nazov' => 'required|min:3|unique:movies',
+            'nazov' => 'required|min:3',
             'popis' => 'required|min:8',
             'zaner' => 'required'
         ]);
         $movie->update($request->all());
-        return view('success', ['objekt' => 'movie', 'typ' => 'edit', 'movie' => $movie]);
+        return view('success', ['objekt' => 'movie', 'typ' => 'edit', 'model' => $movie]);
     }
 
     /**
@@ -131,7 +149,9 @@ class MovieController extends Controller
      */
     public function destroy(Movie $movie)
     {
+        $reviews = $movie->reviews();
+        $reviews->delete();
         $movie->delete();
-        return view('success', [ 'typ' => 'destroy', 'model' => $movie]);
+        return view('success', ['objekt' => 'movie',  'typ' => 'destroy', 'model' => $movie]);
     }
 }

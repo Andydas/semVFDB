@@ -23,9 +23,11 @@ Route::get('/movie/akcny', [MovieController::class, 'akcny'])-> name('movie.akcn
 Route::get('/movie/scifi', [MovieController::class, 'scifi'])-> name('movie.scifi');
 Route::get('/movie/horror', [MovieController::class, 'horror'])-> name('movie.horror');
 Route::get('/movie/success', [MovieController::class, 'success'])-> name('movie.success');
+Route::get('/movie/{movie}/detail', [MovieController::class, 'detail'])-> name('movie.detail');
 Route::resource('movie', MovieController::class);
 
 Route::get('/review/myreviews', [ReviewController::class, 'myReviews'])-> name('review.myreviews');
+Route::get('/review/{review}/detail', [ReviewController::class, 'detail'])-> name('review.detail');
 Route::resource('review', ReviewController::class);
 
 Route::group(['middleware' => ['auth']], function() {

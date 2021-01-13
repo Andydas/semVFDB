@@ -19,14 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7aeaac2-1f1e-44d0-941d-b3e86b44b8ee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/27366aa2-788b-4c26-b16c-f6fd2b7b1c94.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/27366aa2-788b-4c26-b16c-f6fd2b7b1c94.xml" afterDir="false" />
+    <list default="true" id="b7aeaac2-1f1e-44d0-941d-b3e86b44b8ee" name="Default Changelist" comment="Pridany model recenzie, autorizacia, drobne vylepsienia">
+      <change afterPath="$PROJECT_DIR$/resources/views/error.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/movie/detail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/review/detail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/review/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReviewController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/movie/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -173,21 +174,24 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/review" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views" />
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\movie" />
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\review" />
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\movie" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views" />
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\user" />
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\movie" />
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\homepage" />
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\movie\common" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\review" />
-      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\movie" />
     </key>
   </component>
   <component name="RunManager">
@@ -206,8 +210,17 @@
       <updated>1610278756569</updated>
       <workItem from="1610278757699" duration="9581000" />
       <workItem from="1610364165563" duration="18163000" />
-      <workItem from="1610388377530" duration="30599000" />
+      <workItem from="1610388377530" duration="32630000" />
+      <workItem from="1610554531282" duration="11907000" />
     </task>
+    <task id="LOCAL-00001" summary="Pridany model recenzie, autorizacia, drobne vylepsienia">
+      <created>1610480747642</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610480747642</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +236,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Pridany model recenzie, autorizacia, drobne vylepsienia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pridany model recenzie, autorizacia, drobne vylepsienia" />
   </component>
   <component name="WindowStateProjectService">
     <state x="352" y="381" key="#SQL_Dialects" timestamp="1610371148818">
@@ -241,11 +259,12 @@
       <screen x="36" y="0" width="1884" height="1080" />
     </state>
     <state x="715" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610302037310" />
-    <state x="705" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610469114873">
-      <screen x="32" y="0" width="1888" height="1080" />
+    <state x="710" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610563332614">
+      <screen x="40" y="0" width="1880" height="1080" />
     </state>
     <state x="705" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610469114873" />
     <state x="708" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610302417996" />
+    <state x="710" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/40.0.1880.1080/1952.0.1888.1080@40.0.1880.1080" timestamp="1610563332614" />
     <state x="752" y="452" key="ComposerInitDialogKey" timestamp="1610386183825">
       <screen x="32" y="0" width="1888" height="1080" />
     </state>
@@ -262,11 +281,19 @@
       <screen x="36" y="0" width="1884" height="1080" />
     </state>
     <state x="682" y="263" key="NewPhpClassDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610298841456" />
-    <state x="810" y="463" key="NewPhpFileDialog" timestamp="1610476434721">
+    <state x="810" y="463" key="NewPhpFileDialog" timestamp="1610555178227">
       <screen x="32" y="0" width="1888" height="1080" />
     </state>
-    <state x="810" y="463" key="NewPhpFileDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610476434721" />
+    <state x="810" y="463" key="NewPhpFileDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610555178227" />
     <state x="812" y="463" key="NewPhpFileDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610298828351" />
+    <state x="481" y="185" key="SettingsEditor" timestamp="1610560491374">
+      <screen x="40" y="0" width="1880" height="1080" />
+    </state>
+    <state x="481" y="185" key="SettingsEditor/40.0.1880.1080/1952.0.1888.1080@40.0.1880.1080" timestamp="1610560491374" />
+    <state x="568" y="273" key="Vcs.Push.Dialog.v2" timestamp="1610480796691">
+      <screen x="32" y="0" width="1888" height="1080" />
+    </state>
+    <state x="568" y="273" key="Vcs.Push.Dialog.v2/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610480796691" />
     <state x="875" y="417" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1610457261232">
       <screen x="32" y="0" width="1888" height="1080" />
     </state>
