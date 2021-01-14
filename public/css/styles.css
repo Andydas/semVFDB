@@ -57,3 +57,7 @@ body{
 .card-footer{
     border-top:0;
 }
+
+.review {
+    height: 55px;
+}

@@ -5,40 +5,26 @@
 @section('content')
 
 
-<div class="container">
-    <div class="jumbotron text-left transparent">
-@switch ($typ)
-    @case ("create")
+    <div class="container">
+        <div class="jumbotron text-left transparent">
 
-          <h1 class="display-4"> Pridanie záznamu prebehlo úspešne </h1>
-          <hr class="my-4">
-          @if ($objekt == 'movie')
-          <p> Film <strong>{{$model->nazov}}</strong> úspešne pridany</p>
-            @else
-                <p> Recenzia k filmu <strong>{{$model->movie->nazov}}</strong> úspešne pridana</p>
-              @endif
+            <h1 class="display-4"> Vyskytla sa chyba! </h1>
+            <hr class="my-4">
 
-    @break
-    @case ("edit")
-            <h1 class="display-4"> Editacia záznamu prebehla úspešne </h1>
-            <hr class="my-4">
-            @if ($objekt == 'movie')
-            <p> Film <strong>{{$model->nazov}}</strong> úspešne editovany</p>
-            @else
-                <p> Recenzia k filmu <strong>{{$model->movie->nazov}}</strong> úspešne editovana</p>
-            @endif
-    @break
-    @case ("destroy")
-            <h1 class="display-4"> Mazanie záznamu prebehlo úspešne </h1>
-            <hr class="my-4">
-            @if ($objekt == 'movie')
-            <p> Film <strong>{{$model->nazov}}</strong> úspešne zmazana</p>
-            @else
-            <p> Recenzia k filmu <strong>{{$model->movie->nazov}}</strong> úspešne zmazana</p>
-            @endif
-    @break
-@endswitch
-    </div>
+            @switch ($typ)
+                @case ("create")
+                    <p class="alert-warning"> K tomuto filmu už si pridal recenziu! </p>
+                @break
+
+                @case ("edit")
+                    <p class="alert-warning"> Nemôžeš editovať recenziu, ktorá patrí inému užívateľovi!</p>
+                @break
+
+                @case ("destroy")
+                    <p class="alert-warning"> Nemôžeš zmazať recenziu, ktorá patrí inému užívateľovi! </p>
+                @break
+            @endswitch
+        </div>
     </div>
 @endsection
 

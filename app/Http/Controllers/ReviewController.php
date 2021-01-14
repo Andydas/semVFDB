@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\DB;
 
 class ReviewController extends Controller
 {
+    public function __construct()
+    {
+        $this->authorizeResource(Review::class, 'review');
+    }
 
     public function myReviews(Request $request){
         // $movies = DB::table('movies')->where('zaner', 'akcny')->orderBy('nazov')->paginate(4);
@@ -55,7 +59,7 @@ class ReviewController extends Controller
             'movie' => $movie
         ]);
         } else {
-            echo('hocno');
+            return view('error', ['objekt' => 'review', 'typ' => 'create', 'model' => $movie]);
         }
     }
 
@@ -68,8 +72,8 @@ class ReviewController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'popis' => 'required|min:8',
-            'hodnotenie' => 'required|gte:0|lte:5'
+            'popis' => 'required|min:4',
+            'hodnotenie' => 'required|integer|gte:0|lte:5'
         ]);
 
         $review = $request->user()->reviews()->create([
@@ -98,11 +102,19 @@ class ReviewController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request, Review $review)
     {
-        //
+        //if ($request->user()->id == $review->user_id) {
+            return view('review.edit', [
+                'action' => route('review.update', $review->id),
+                'method' => 'put',
+                'model' => $review
+            ]);
+        //} else {
+        //    return view('error', ['objekt' => 'review', 'typ' => 'edit', 'model' => $review]);
+        //}
     }
 
     /**
@@ -110,11 +122,18 @@ class ReviewController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Review $review)
     {
-        //
+
+            $request->validate([
+                'popis' => 'required|min:4',
+                'hodnotenie' => 'required|integer|gte:0|lte:5'
+            ]);
+            $review->update($request->all());
+            return view('success', ['objekt' => 'review', 'typ' => 'edit', 'model' => $review]);
+
     }
 
     /**
@@ -123,9 +142,13 @@ class ReviewController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function destroy(Review $review)
+    public function destroy(Request $request, Review $review)
     {
-        $review->delete();
-        return view('success', ['objekt' => 'review', 'typ' => 'destroy', 'model' => $review]);
+       // if ($request->user()->id == $review->user_id){
+            $review->delete();
+            return view('success', ['objekt' => 'review', 'typ' => 'destroy', 'model' => $review]);
+       // } else {
+        //    return view('error', ['objekt' => 'review', 'typ' => 'destroy', 'model' => $review]);
+       // }
     }
 }

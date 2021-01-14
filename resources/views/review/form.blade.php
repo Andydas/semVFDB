@@ -12,8 +12,9 @@
         @csrf
         @method($method)
 
+        @if(isset($movie))
         <input type="hidden" id="movie" name="movie" value="{{$movie->id}}">
-
+        @endif
         <div class="form-group">
             <label for="popisFilmu">Popis hodnotenia</label>
             <textarea class="form-control" rows="4" name="popis" required>{{old('popis', @$model->popis)}} </textarea>

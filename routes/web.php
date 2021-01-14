@@ -36,6 +36,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/movie/create', [MovieController::class, 'create'])-> name('movie.create');
     Route::get('/review/{movie}/create', [ReviewController::class, 'create'])-> name('review.create');
     Route::get('/review/{review}/destroy', [ReviewController::class, 'destroy'])-> name('review.destroy');
+    Route::get('/review/{review}/edit', [ReviewController::class, 'edit'])-> name('review.edit');
 });
 
 Route::resource('user', UserController::class);

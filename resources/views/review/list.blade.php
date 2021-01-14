@@ -14,15 +14,15 @@
         $inc = 0;
         ?>
         @foreach ($reviews as $review)
-            <div class="card col-12">
-                <div class="card-body row p-3">
+            <div class="card review col-12">
+                <div class="row my-auto">
                     <div class="col-10 my-auto">
                     <strong>{{$review->movie->nazov}}</strong>
                     </div>
-                    @can('create', App\Models\Movie::class)
-                        <div class="upravovanieMazanie text-right col-2">
+                    @if(Auth::user()->id == $review->user_id)
+                        <div class="upravovanieMazanie text-right my-auto col-2">
                             {{--                                upravit--}}
-                            <a href=" {{ route('review.edit', $review->movie->id) }}"
+                            <a href=" {{ route('review.edit', $review->id) }}"
                                class=" m-1 btn btn-dark" role="button">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                      height="16" fill="currentColor"
@@ -32,7 +32,7 @@
                                 </svg>
                             </a>
                             {{--                                  zmazat--}}
-                            <a href="{{ route('review.destroy', $review->movie->id) }}"
+                            <a href="{{ route('review.destroy', $review->id) }}"
                                class="m-1 btn btn-dark" role="button">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                      height="16" fill="currentColor"
@@ -42,7 +42,7 @@
                                 </svg>
                             </a>
                         </div>
-                @endcan
+                @endif
             </div>
     </div>
     <?php
