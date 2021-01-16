@@ -5,35 +5,60 @@
     <div class="container">
 
         <div class="jumbotron text-left transparent">
-            @if ($zaner == 'akcny')
-                <h1 class="display-4"> {{ __('Akcne filmy ') }}</h1>
-                <p class="lead">Top akčné filmy podľa hodnotenia užívateľov.</p>
+            @if ($zaner == 'vsetky' || ($zaner == '' && $nazov == ''))
+                <h1 class="display-4"> {{ __('Všetky filmy ') }}</h1>
+                <p class="lead">Zoznam všetkých filmov databázy.</p>
                 <hr class="my-4">
-            @elseif ($zaner == 'scifi')
-                <h1 class="display-4"> {{ __('Scifi filmy ') }}</h1>
-                <p class="lead">Top scifi filmy podľa hodnotenia užívateľov.</p>
+            @elseif ($zaner == '')
+                <h1 class="display-4"> {{ __('Filter filmov ') }}</h1>
+                <p class="lead">Filmy filtrované podľa názvu: {{$nazov}}</p>
                 <hr class="my-4">
-            @elseif ($zaner == 'horror')
-                <h1 class="display-4"> {{ __('Horrorove filmy ') }}</h1>
-                <p class="lead">Top horrorove filmy podľa hodnotenia užívateľov.</p>
+            @elseif ($nazov == '')
+                <h1 class="display-4"> {{ __('Filter filmov ') }}</h1>
+                <p class="lead">Filmy filtrované podľa žánra: {{$zaner}}</p>
                 <hr class="my-4">
-            @elseif ($zaner == 'vsetky')
-                <h1 class="display-4"> {{ __('Vsetky filmy ') }}</h1>
-                <p class="lead">Top filmy podľa hodnotenia užívateľov.</p>
+            @else
+                <h1 class="display-4"> {{ __('Filter filmov ') }}</h1>
+                <p class="lead">Filmy filtrované podľa názvu: {{$nazov}} a žánra: {{$zaner}}</p>
                 <hr class="my-4">
             @endif
         </div>
 
-        <?php
-        $inc = 0;
-        ?>
-        @foreach ($movies as $movie)
+        <div class="movie-filter row justify-content-end">
+            <form action="{{$action}}">
+                @csrf
+                @method($method)
+                <div class="form-group d-flex ">
+                    <input type="text" class="form-control" name="nazov" value="" placeholder="Názov filmu">
+                    <select class="form-control mb-2 " style="width:200px" name="zaner">
+                        <option selected value="">Zvol zaner</option>
+                        <option value="akcny">akcny</option>
+                        <option value="scifi">scifi</option>
+                        <option value="horror">horror</option>
+                    </select>
+                    <button type="" class="btn btn-dark mx-2" style="height:40px">Potvrdiť</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="movie-list">
+            <?php
+            $inc = 0;
+            $count = 0;
+            ?>
+            @foreach($movies as $movie)
+               <?php $count++; ?>
+                @endforeach
+
+            @foreach ($movies as $movie)
 
 
-            @if($inc%2 == 0)
-                <div class="card-deck">
-                    @endif
-                        <div class="card sedePozadie mb-3 mr-2 ml-2 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-lx-6" style="min-width: 200px">
+                @if($inc%2 == 0)
+                    <div class="card-deck">
+                        @endif
+                        <div
+                            class="card sedePozadie px-0 mb-3 mr-2 ml-2 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-lx-6"
+                            style="min-width: 200px">
                             <div class="detailLink">
                                 <div class="row no-gutters h-100">
 
@@ -43,22 +68,27 @@
 
                                     <div class="col-md-8">
                                         <div class="h-100 d-flex flex-column">
-                                            <div class="card-body">
+                                            <div class="card-body pb-0">
                                                 <div class="d-flex flex-column">
-                                                    <a href="{{route('movie.detail', $movie->id)}}">
+                                                    <a href="{{route('movie.show', $movie->id)}}">
                                                         <h5 class="card-title">{{$movie->nazov}}</h5>
                                                     </a>
-                                                    <p class="card-text">{{$movie->popis}}</p>
-                                                    <br>
-                                                    <p class="card-text">Žáner: {{$movie->zaner}}</p>
+                                                    <p class="card-text">{{\Illuminate\Support\Str::limit($movie->popis,170, $end = '...') }}</p>
+
+                                                    <p class="card-detail">Žáner: {{$movie->zaner}}</p>
+                                                    @if(isset($movie->hodnotenie))
+                                                    <p class="card-detail">Hodnotenie: {{number_format(round($movie->hodnotenie, 1),1)}} </p>
+                                                    @else
+                                                    <p class="card-detail">Hodnotenie: - </p>
+                                                        @endif
                                                 </div>
                                             </div>
 
                                             @if(Auth::user() != null)
-                                                <div class="card-footer bg-transparent d-flex justify-content-between">
-                                                    <div class="pridajRecenziu ">
+                                                <div class="card-footer py-1 bg-transparent d-flex justify-content-between">
+                                                    <div class="pridajRecenziu m-0 my-1 ">
                                                         <a href=" {{ route('review.create', $movie->id) }}"
-                                                           class=" m-1 btn btn-dark" role="button">REcenzia</a>
+                                                           class=" m-0 btn btn-dark" role="button">Recenzia</a>
                                                     </div>
                                                     @can('create', App\Models\Movie::class)
                                                         <div class="upravovanieMazanie text-nowrap">
@@ -74,7 +104,7 @@
                                                             </a>
                                                             {{--                                  zmazat--}}
                                                             <a href="{{ route('movie.destroy', $movie->id) }}"
-                                                               class="m-1 btn btn-dark" role="button">
+                                                               class="my-1 mr-0 btn btn-dark" role="button">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                                      height="16" fill="currentColor"
                                                                      class="bi bi-trash-fill" viewBox="0 0 16 16">
@@ -92,13 +122,34 @@
                             </div>
                         </div>
 
-                    <?php
-                    $inc++;
-                    ?>
-                    @if($inc%2 == 0)
-                </div>
-            @endif
-        @endforeach
-        <div>{{$movies->links()}}</div>
+                        <?php
+                        $inc++;
+                        ?>
+                        @if($inc%2 == 0)
+                    </div>
+                @endif
+                @if($inc%2 != 0 && $inc == $count)
+                        <div
+                            class="card invisible px-0 mb-3 mr-2 ml-2 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-lx-6"
+                            style="min-width: 200px">
+                            <div class="detailLink">
+                                <div class="row no-gutters h-100">
+                                    <div class="col-md-4 d-flex align-items-center">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="h-100 d-flex flex-column">
+                                            <div class="card-body pb-0">
+                                                <div class="d-flex flex-column">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        @endif
+            @endforeach
+           <div class="strankovanie">{{$movies->links()}}</div>
+        </div>
     </div>
 @endsection

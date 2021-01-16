@@ -4,7 +4,7 @@
     <div class="container">
         <div class="jumbotron text-left transparent">
             <h1 class="display-4"> Vymyslená filmová databáza</h1>
-            <p class="lead">Stránka venovaná nadšencom všetkých žánrov filmov a seriálov.</p>
+            <p class="lead">Stránka venovaná nadšencom všetkých žánrov filmov.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id turpis ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam suscipit mauris et laoreet luctus. Cras pretium tincidunt aliquet. </p>
             <hr class="my-4">
         </div>

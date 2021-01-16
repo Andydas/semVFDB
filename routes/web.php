@@ -22,11 +22,13 @@ Route::resource('homepage', HomepageController::class);
 Route::get('/movie/akcny', [MovieController::class, 'akcny'])-> name('movie.akcny');
 Route::get('/movie/scifi', [MovieController::class, 'scifi'])-> name('movie.scifi');
 Route::get('/movie/horror', [MovieController::class, 'horror'])-> name('movie.horror');
+Route::get('/movie/filter', [MovieController::class, 'filterMovie'])-> name('movie.filterMovie');
 Route::get('/movie/success', [MovieController::class, 'success'])-> name('movie.success');
 Route::get('/movie/{movie}/detail', [MovieController::class, 'detail'])-> name('movie.detail');
 Route::resource('movie', MovieController::class);
 
 Route::get('/review/myreviews', [ReviewController::class, 'myReviews'])-> name('review.myreviews');
+Route::get('/review/filter', [ReviewController::class, 'filterReview'])-> name('review.filterReview');
 Route::get('/review/{review}/detail', [ReviewController::class, 'detail'])-> name('review.detail');
 Route::resource('review', ReviewController::class);
 

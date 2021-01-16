@@ -59,5 +59,29 @@ body{
 }
 
 .review {
-    height: 55px;
+    min-height: 46px;
+}
+
+.detail-img{
+    max-height: 350px;
+
+}
+.card-detail{
+    margin-bottom: 0;
+}
+
+.btn-review{
+    color:black!important;
+}
+
+.invisibleCard{
+    background-color: rgba(0,0,0,0) !important;
+}
+.invisibleCard:hover{
+    background-color: rgba(0,0,0,0) !important;
+}
+
+.reviewSearchField{
+    margin: 0px;
+    margin-bottom: 10px;
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Movie;
 use App\Models\Review;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -33,6 +34,31 @@ class ReviewController extends Controller
         return view('review.list', ['reviews' => $reviews]);
     }
 
+    public function filterReview(Request $request){
+
+        $allReviews = Review::with('movie')->get();
+        $reviews = [];
+        //dd($request->input('vstup'));
+        if ($request->input('vstup') != ''){
+            foreach ($allReviews as $review){
+                if (str_contains(strtolower($review->user->name), strtolower($request->input('vstup'))) ||
+                    str_contains(strtolower($review->movie->nazov), strtolower($request->input('vstup')))){
+                    $reviews[] = $review;
+                }
+            }
+        } else {
+            $reviews = Review::with('movie')->get();
+        }
+        $user = $request->user();
+        return response()->json(['reviews' => $reviews,'user'=> $user]);
+
+
+//        return view('review.list', ['reviews' => $reviews,
+//            'name' => $request->input('name')
+//        ]);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -41,6 +67,7 @@ class ReviewController extends Controller
     public function index()
     {
         $reviews = Review::all();
+
         return view('review.list', ['reviews' => $reviews]);
     }
 
@@ -76,13 +103,19 @@ class ReviewController extends Controller
             'hodnotenie' => 'required|integer|gte:0|lte:5'
         ]);
 
+        $movie = Movie::with('reviews')->where('id', $request->input('movie'))->first();
+
+        if (!$movie->reviews->pluck('user_id')->contains($request->user()->id)){
         $review = $request->user()->reviews()->create([
             'popis' => $request->input('popis'),
             'hodnotenie' => $request->input('hodnotenie'),
             'movie_id' => $request->input('movie')
         ]);
-        return view('success', ['objekt' => 'review', 'typ' => 'create', 'model' => $review]);
+            return view('success', ['objekt' => 'review', 'typ' => 'create', 'model' => $review]);
 
+        } else {
+            return view('error', ['objekt' => 'review', 'typ' => 'create', 'model' => $movie]);
+        }
 //        $review = Review::create($request->all());
 
     }
@@ -140,15 +173,25 @@ class ReviewController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\JsonResponse|\Illuminate\Http\Response
      */
     public function destroy(Request $request, Review $review)
     {
-       // if ($request->user()->id == $review->user_id){
+        //if ($request->user()->id == $review->user_id){
             $review->delete();
-            return view('success', ['objekt' => 'review', 'typ' => 'destroy', 'model' => $review]);
-       // } else {
-        //    return view('error', ['objekt' => 'review', 'typ' => 'destroy', 'model' => $review]);
+            $reviews = Review::with('movie')->get();
+            $user = $request->user();
+            return response()->json(['reviews' => $reviews,'user'=> $user]);
+        //}//else {
+            //return view('error', ['objekt' => 'review', 'typ' => 'destroy', 'model' => $review]);
        // }
+
+       /*if ($request->user()->id == $review->user_id){
+           $review->delete();
+
+           return view('success', ['objekt' => 'review', 'typ' => 'destroy', 'model' => $review]);
+       } else {
+           return view('error', ['objekt' => 'review', 'typ' => 'destroy', 'model' => $review]);
+       }*/
     }
 }

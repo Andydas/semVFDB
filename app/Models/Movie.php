@@ -10,6 +10,7 @@ class Movie extends Model
     use HasFactory;
 
 
+
     protected $guarded = [];
     /*    protected $fillable = [
       'nazov',
