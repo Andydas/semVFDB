@@ -46,7 +46,7 @@ class UserController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @param $user
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
      */
     public function store(Request $request, User $user)
     {
@@ -66,8 +66,7 @@ class UserController extends Controller
         $user->save();
 
 
-        $users = User::all();
-        return view('user.index', ['users' => $users]);
+        return redirect()->route('user.index');
     }
 
     /**
@@ -101,7 +100,7 @@ class UserController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
      */
     public function update(Request $request, User $user)
     {
@@ -118,15 +117,14 @@ class UserController extends Controller
             'password' => Hash::make($request->input('password')),
             'role' => $request->input('role')
         ]);
-        $users = User::all();
-        return view('user.index', ['users' => $users]);
+        return redirect()->route('user.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
      */
     public function destroy(User $user)
     {
@@ -135,7 +133,6 @@ class UserController extends Controller
             $reviews->delete();
             $user->delete();
         });
-        $users = User::all();
-        return view('user.index', ['users' => $users]);
+        return redirect()->route('user.index');
     }
 }

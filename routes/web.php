@@ -32,6 +32,9 @@ Route::get('/review/filter', [ReviewController::class, 'filterReview'])-> name('
 Route::get('/review/{review}/detail', [ReviewController::class, 'detail'])-> name('review.detail');
 Route::resource('review', ReviewController::class);
 
+
+Route::resource('user', UserController::class);
+
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/movie/{movie}/edit', [MovieController::class, 'edit'])-> name('movie.edit');
     Route::get('/movie/{movie}/destroy', [MovieController::class, 'destroy'])-> name('movie.destroy');
@@ -39,11 +42,12 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/review/{movie}/create', [ReviewController::class, 'create'])-> name('review.create');
     Route::get('/review/{review}/destroy', [ReviewController::class, 'destroy'])-> name('review.destroy');
     Route::get('/review/{review}/edit', [ReviewController::class, 'edit'])-> name('review.edit');
+
     Route::get('/user/{user}/edit', [UserController::class, 'edit'])-> name('user.edit');
     Route::get('/user/{user}/destroy', [UserController::class, 'destroy'])-> name('user.destroy');
 });
 
-Route::resource('user', UserController::class);
+
 
 Route::get('/', function() {
     return view('homepage.index');

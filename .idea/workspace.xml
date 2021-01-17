@@ -19,20 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7aeaac2-1f1e-44d0-941d-b3e86b44b8ee" name="Default Changelist" comment="pridany filter filmov, upravene listovanie recenzii, filter recenzii, implementacia AJAX(search, delete recenzie)">
-      <change afterPath="$PROJECT_DIR$/resources/views/user/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/form.blade.php" afterDir="false" />
+    <list default="true" id="b7aeaac2-1f1e-44d0-941d-b3e86b44b8ee" name="Default Changelist" comment="vyladeny ajax, pridana sprava uzivatelov">
+      <change afterPath="$PROJECT_DIR$/resources/views/user/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReviewController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/UserPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/UserPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/filterReviewsAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/filterReviewsAjax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/movie/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/review/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/review/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -217,7 +207,7 @@
       <workItem from="1610364165563" duration="18163000" />
       <workItem from="1610388377530" duration="32630000" />
       <workItem from="1610554531282" duration="81094000" />
-      <workItem from="1610874978300" duration="16385000" />
+      <workItem from="1610874978300" duration="18342000" />
     </task>
     <task id="LOCAL-00001" summary="Pridany model recenzie, autorizacia, drobne vylepsienia">
       <created>1610480747642</created>
@@ -254,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610825993200</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="vyladeny ajax, pridana sprava uzivatelov">
+      <created>1610912782341</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610912782341</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +274,8 @@
     <MESSAGE value="drobne upravy" />
     <MESSAGE value="Reviews - dorobene operacie nad modelom + autorizacaia" />
     <MESSAGE value="pridany filter filmov, upravene listovanie recenzii, filter recenzii, implementacia AJAX(search, delete recenzie)" />
-    <option name="LAST_COMMIT_MESSAGE" value="pridany filter filmov, upravene listovanie recenzii, filter recenzii, implementacia AJAX(search, delete recenzie)" />
+    <MESSAGE value="vyladeny ajax, pridana sprava uzivatelov" />
+    <option name="LAST_COMMIT_MESSAGE" value="vyladeny ajax, pridana sprava uzivatelov" />
   </component>
   <component name="WindowStateProjectService">
     <state x="352" y="381" key="#SQL_Dialects" timestamp="1610371148818">
@@ -337,10 +335,10 @@
       <screen x="40" y="0" width="1880" height="1080" />
     </state>
     <state x="481" y="185" key="SettingsEditor/40.0.1880.1080/1952.0.1888.1080@40.0.1880.1080" timestamp="1610560491374" />
-    <state x="568" y="273" key="Vcs.Push.Dialog.v2" timestamp="1610825994892">
+    <state x="568" y="273" key="Vcs.Push.Dialog.v2" timestamp="1610913092088">
       <screen x="32" y="0" width="1888" height="1080" />
     </state>
-    <state x="568" y="273" key="Vcs.Push.Dialog.v2/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610825994892" />
+    <state x="568" y="273" key="Vcs.Push.Dialog.v2/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610913092088" />
     <state x="574" y="273" key="Vcs.Push.Dialog.v2/40.0.1880.1080/1952.0.1888.1080@40.0.1880.1080" timestamp="1610645986972" />
     <state x="875" y="417" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1610457261232">
       <screen x="32" y="0" width="1888" height="1080" />
