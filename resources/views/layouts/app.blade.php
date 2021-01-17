@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="{{asset("css/styles.css")}}">
 
-    <script src="{{asset("js/deleteReviewsAjax.js")}}"></script>
+{{--    <script src="{{asset("js/deleteReviewsAjax.js")}}"></script>--}}
     <script src="{{asset("js/filterReviewsAjax.js")}}"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 {{--    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>--}}
@@ -43,37 +43,25 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('movie.index')}}">{{__('Filmy')}}<span class="sr-only"></span></a>
                     </li>
-{{--                    <li class="nav-item dropdown">--}}
-{{--                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-{{--                            Filmy--}}
-{{--                        </a>--}}
-{{--                        <div class="dropdown-menu">--}}
-{{--                            <a class="dropdown-item" href="{{route('movie.index')}}">Vsetky</a>--}}
-{{--                            <a class="dropdown-item" href="{{route('movie.akcny')}}">Akčné</a>--}}
-{{--                            <a class="dropdown-item" href="{{route('movie.scifi')}}">Sci-fi</a>--}}
-{{--                            <a class="dropdown-item" href="{{route('movie.horror')}}">Horrory</a>--}}
-{{--                        </div>--}}
-{{--                    </li>--}}
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('review.index')}}">{{__('Recenzie')}}<span class="sr-only">(current)</span></a>
                         </li>
 
                     @if(Auth::user() != null && Auth::user()->role == 'admin')
+                        <li class="nav-item">
+                            @auth
+                                <a class="nav-link" href="{{route('user.index')}}">Užívatelia</a>
+                            @endauth
+                        </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Pridaj
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="{{route('movie.create')}}">Film</a>
-                                <a class="dropdown-item" href="?c=Show&a=add">Seriál</a>
+                                <a class="dropdown-item" href="{{route('user.create')}}">Užívateľa</a>
                             </div>
-                        </li>
-                    @endif
-                    @if(Auth::user() != null && Auth::user()->role == 'admin')
-                        <li class="nav-item">
-                            @auth
-                                <a class="nav-link" href="{{route('user.index')}}">{{__('Správa užívateľov')}}</a>
-                            @endauth
                         </li>
                     @endif
                 </ul>

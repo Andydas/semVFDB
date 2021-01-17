@@ -39,7 +39,7 @@ class ReviewController extends Controller
         $allReviews = Review::with('movie')->get();
         $reviews = [];
         //dd($request->input('vstup'));
-        if ($request->input('vstup') != ''){
+        if ($request->input('vstup') != ""){
             foreach ($allReviews as $review){
                 if (str_contains(strtolower($review->user->name), strtolower($request->input('vstup'))) ||
                     str_contains(strtolower($review->movie->nazov), strtolower($request->input('vstup')))){
@@ -47,10 +47,12 @@ class ReviewController extends Controller
                 }
             }
         } else {
-            $reviews = Review::with('movie')->get();
+            $reviews = Review::with('movie')->with('user')->get();
         }
-        $user = $request->user();
+            $user = $request->user();
+
         return response()->json(['reviews' => $reviews,'user'=> $user]);
+
 
 
 //        return view('review.list', ['reviews' => $reviews,
@@ -179,7 +181,7 @@ class ReviewController extends Controller
     {
         //if ($request->user()->id == $review->user_id){
             $review->delete();
-            $reviews = Review::with('movie')->get();
+            $reviews = Review::with('movie')->with('user')->get();
             $user = $request->user();
             return response()->json(['reviews' => $reviews,'user'=> $user]);
         //}//else {

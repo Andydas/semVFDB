@@ -19,23 +19,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7aeaac2-1f1e-44d0-941d-b3e86b44b8ee" name="Default Changelist" comment="Reviews - dorobene operacie nad modelom + autorizacaia">
-      <change afterPath="$PROJECT_DIR$/resources/views/movie/reviewlist.blade.php" afterDir="false" />
+    <list default="true" id="b7aeaac2-1f1e-44d0-941d-b3e86b44b8ee" name="Default Changelist" comment="pridany filter filmov, upravene listovanie recenzii, filter recenzii, implementacia AJAX(search, delete recenzie)">
+      <change afterPath="$PROJECT_DIR$/resources/views/user/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReviewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/ReviewPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/ReviewPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Policies/UserPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/UserPolicy.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/homepage/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homepage/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/filterReviewsAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/filterReviewsAjax.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/movie/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/movie/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/review/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/review/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,25 +178,25 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/user" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\js" />
-      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\public\js" />
-      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\movie" />
-      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\review" />
-      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views" />
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\user" />
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\movie" />
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\homepage" />
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\movie\common" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\user" />
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\js" />
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\public\js" />
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\movie" />
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\review" />
     </key>
   </component>
   <component name="RunManager">
@@ -218,7 +216,8 @@
       <workItem from="1610278757699" duration="9581000" />
       <workItem from="1610364165563" duration="18163000" />
       <workItem from="1610388377530" duration="32630000" />
-      <workItem from="1610554531282" duration="80376000" />
+      <workItem from="1610554531282" duration="81094000" />
+      <workItem from="1610874978300" duration="16385000" />
     </task>
     <task id="LOCAL-00001" summary="Pridany model recenzie, autorizacia, drobne vylepsienia">
       <created>1610480747642</created>
@@ -248,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610645984317</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="pridany filter filmov, upravene listovanie recenzii, filter recenzii, implementacia AJAX(search, delete recenzie)">
+      <created>1610825993200</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610825993200</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +276,8 @@
     <MESSAGE value="Pridany model recenzie, autorizacia, drobne vylepsienia" />
     <MESSAGE value="drobne upravy" />
     <MESSAGE value="Reviews - dorobene operacie nad modelom + autorizacaia" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reviews - dorobene operacie nad modelom + autorizacaia" />
+    <MESSAGE value="pridany filter filmov, upravene listovanie recenzii, filter recenzii, implementacia AJAX(search, delete recenzie)" />
+    <option name="LAST_COMMIT_MESSAGE" value="pridany filter filmov, upravene listovanie recenzii, filter recenzii, implementacia AJAX(search, delete recenzie)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="352" y="381" key="#SQL_Dialects" timestamp="1610371148818">
@@ -289,10 +296,10 @@
       <screen x="36" y="0" width="1884" height="1080" />
     </state>
     <state x="715" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610302037310" />
-    <state x="710" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610563332614">
-      <screen x="40" y="0" width="1880" height="1080" />
+    <state x="705" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610887587594">
+      <screen x="32" y="0" width="1888" height="1080" />
     </state>
-    <state x="705" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610469114873" />
+    <state x="705" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610887587594" />
     <state x="708" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610302417996" />
     <state x="710" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/40.0.1880.1080/1952.0.1888.1080@40.0.1880.1080" timestamp="1610563332614" />
     <state x="752" y="452" key="ComposerInitDialogKey" timestamp="1610386183825">
@@ -312,14 +319,15 @@
       <screen x="36" y="0" width="1884" height="1080" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610303208060" />
-    <state x="682" y="263" key="NewPhpClassDialog" timestamp="1610298841456">
-      <screen x="36" y="0" width="1884" height="1080" />
-    </state>
-    <state x="682" y="263" key="NewPhpClassDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610298841456" />
-    <state x="810" y="463" key="NewPhpFileDialog" timestamp="1610555178227">
+    <state x="679" y="263" key="NewPhpClassDialog" timestamp="1610886133439">
       <screen x="32" y="0" width="1888" height="1080" />
     </state>
-    <state x="810" y="463" key="NewPhpFileDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610555178227" />
+    <state x="679" y="263" key="NewPhpClassDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610886133439" />
+    <state x="682" y="263" key="NewPhpClassDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610298841456" />
+    <state x="810" y="463" key="NewPhpFileDialog" timestamp="1610886139725">
+      <screen x="32" y="0" width="1888" height="1080" />
+    </state>
+    <state x="810" y="463" key="NewPhpFileDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610886139725" />
     <state x="812" y="463" key="NewPhpFileDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610298828351" />
     <state x="718" y="260" key="RollbackChangesDialog" timestamp="1610799670193">
       <screen x="32" y="0" width="1888" height="1080" />
@@ -329,10 +337,10 @@
       <screen x="40" y="0" width="1880" height="1080" />
     </state>
     <state x="481" y="185" key="SettingsEditor/40.0.1880.1080/1952.0.1888.1080@40.0.1880.1080" timestamp="1610560491374" />
-    <state x="574" y="273" key="Vcs.Push.Dialog.v2" timestamp="1610645986972">
-      <screen x="40" y="0" width="1880" height="1080" />
+    <state x="568" y="273" key="Vcs.Push.Dialog.v2" timestamp="1610825994892">
+      <screen x="32" y="0" width="1888" height="1080" />
     </state>
-    <state x="568" y="273" key="Vcs.Push.Dialog.v2/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610480796691" />
+    <state x="568" y="273" key="Vcs.Push.Dialog.v2/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610825994892" />
     <state x="574" y="273" key="Vcs.Push.Dialog.v2/40.0.1880.1080/1952.0.1888.1080@40.0.1880.1080" timestamp="1610645986972" />
     <state x="875" y="417" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1610457261232">
       <screen x="32" y="0" width="1888" height="1080" />
@@ -347,10 +355,14 @@
     </state>
     <state x="277" y="283" width="1313" height="698" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610461397586" />
     <state x="503" y="294" width="880" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610303460779" />
-    <state x="2039" y="0" width="1580" height="759" maximized="true" key="dock-window-1" timestamp="1610820977912">
+    <state x="793" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610883040511">
+      <screen x="32" y="0" width="1888" height="1080" />
+    </state>
+    <state x="793" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610883040511" />
+    <state x="1941" y="-26" width="1580" height="759" key="dock-window-1" timestamp="1610882010881">
       <screen x="1952" y="0" width="1888" height="1080" />
     </state>
-    <state x="2039" y="0" width="1580" height="759" maximized="true" key="dock-window-1/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610820977912" />
+    <state x="1941" y="-26" width="1580" height="759" key="dock-window-1/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610882010881" />
     <state x="638" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1610793350228">
       <screen x="32" y="0" width="1888" height="1080" />
     </state>
