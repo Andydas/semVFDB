@@ -1,5 +1,6 @@
 @extends('movie.index')
 
+@section('title', 'Zoznam filmov')
 
 @section('content')
     <div class="container">
@@ -36,7 +37,7 @@
                         <option value="scifi">scifi</option>
                         <option value="horror">horror</option>
                     </select>
-                    <button type="" class="btn btn-dark mx-2" style="height:40px">Potvrdiť</button>
+                    <button class="btn btn-dark mx-2" style="height:40px">Potvrdiť</button>
                 </div>
             </form>
         </div>
@@ -63,7 +64,7 @@
                                 <div class="row no-gutters h-100">
 
                                     <div class="col-md-4 d-flex align-items-center">
-                                        <img src="{{ $movie->img }}" class="card-img">
+                                        <img src="{{ $movie->img }}" alt="obrazok{{ $movie->id }}" class="card-img">
                                     </div>
 
                                     <div class="col-md-8">
@@ -146,6 +147,7 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         </div>
         @endif
             @endforeach

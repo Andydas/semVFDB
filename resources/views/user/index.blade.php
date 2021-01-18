@@ -1,12 +1,13 @@
 @extends('movie.index')
 
+@section('title', 'Správa užívateľov')
 
 @section('content')
     <div class="container">
 
         <div class="jumbotron text-left transparent">
-            <h1 class="display-4"> {{ __('Recenzie od uzivatelov ') }}</h1>
-            <p class="lead">Top akčné filmy podľa hodnotenia užívateľov.</p>
+            <h1 class="display-4"> Správa užívateľov </h1>
+            <p class="lead"> Zoznam užívateľov a ich spravovanie. </p>
             <hr class="my-4">
         </div>
 
@@ -16,7 +17,7 @@
                 <div class="row my-auto">
                     <div class="review-list-user my-auto col-3">Meno</div>
                     <div class="review-list-user my-auto col-4">E-mail</div>
-                    <div class="review-list-movie my-auto">Roľa</div>
+                    <div class="review-list-movie my-auto">Rola</div>
                 </div>
             </div>
         </div>

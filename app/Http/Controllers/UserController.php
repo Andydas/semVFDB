@@ -50,10 +50,12 @@ class UserController extends Controller
      */
     public function store(Request $request, User $user)
     {
-        $request->validate([
-            'name' => 'required|min:2',
-            'email' => 'required|email:rfc',
+        $$request->validate([
+            'name' => 'required|unique:users|min:2',
+            'email' => 'required|unique:users|email:rfc',
             'role' => 'required|in:'. implode(',', ['user','admin']),
+            'password' => 'required|min:6',
+            'passwordConfirmation' => 'required|min:6|same:password'
         ]);
 
         $user = User::create([
@@ -109,7 +111,7 @@ class UserController extends Controller
             'email' => 'required|email:rfc',
             'role' => 'required|in:'. implode(',', ['user','admin']),
             'password' => 'required|min:6',
-            'passwordConfirmation' => 'required|min:6|same:password',
+            'passwordConfirmation' => 'required|min:6|same:password'
         ]);
         $user->update([
             'name' => $request->input('name'),

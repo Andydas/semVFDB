@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Vytváranie recenzie')
+
 @section('content')
 <div class="container">
 

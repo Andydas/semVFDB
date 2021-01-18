@@ -19,11 +19,39 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7aeaac2-1f1e-44d0-941d-b3e86b44b8ee" name="Default Changelist" comment="vyladeny ajax, pridana sprava uzivatelov">
-      <change afterPath="$PROJECT_DIR$/resources/views/user/create.blade.php" afterDir="false" />
+    <list default="true" id="b7aeaac2-1f1e-44d0-941d-b3e86b44b8ee" name="Default Changelist" comment="opravena sprava uzivatela">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/27366aa2-788b-4c26-b16c-f6fd2b7b1c94.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/27366aa2-788b-4c26-b16c-f6fd2b7b1c94.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShowController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Show.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/filterReviewsAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/filterReviewsAjax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/error.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/error.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/movie/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/movie/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/movie/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/movie/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/movie/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/movie/reviewlist.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/movie/success.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/success.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/review/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/review/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/review/detail.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/review/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/review/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/review/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/review/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/review/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/review/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/review/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/success.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/success.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,25 +196,25 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views" />
-      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\user" />
-      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\movie" />
-      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\homepage" />
-      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\movie\common" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\user" />
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\js" />
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\public\js" />
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\movie" />
       <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\review" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views" />
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semestralka\semVFDB\resources\views\user" />
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\movie" />
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\homepage" />
+      <recent name="C:\Users\drzik\OneDrive\Fri\3rocnik\vaii\semVFDB\resources\views\movie\common" />
     </key>
   </component>
   <component name="RunManager">
@@ -207,7 +235,9 @@
       <workItem from="1610364165563" duration="18163000" />
       <workItem from="1610388377530" duration="32630000" />
       <workItem from="1610554531282" duration="81094000" />
-      <workItem from="1610874978300" duration="18342000" />
+      <workItem from="1610874978300" duration="21188000" />
+      <workItem from="1610966496599" duration="5197000" />
+      <workItem from="1610971758476" duration="6236000" />
     </task>
     <task id="LOCAL-00001" summary="Pridany model recenzie, autorizacia, drobne vylepsienia">
       <created>1610480747642</created>
@@ -251,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610912782341</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="opravena sprava uzivatela">
+      <created>1610914449721</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610914449721</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +312,8 @@
     <MESSAGE value="Reviews - dorobene operacie nad modelom + autorizacaia" />
     <MESSAGE value="pridany filter filmov, upravene listovanie recenzii, filter recenzii, implementacia AJAX(search, delete recenzie)" />
     <MESSAGE value="vyladeny ajax, pridana sprava uzivatelov" />
-    <option name="LAST_COMMIT_MESSAGE" value="vyladeny ajax, pridana sprava uzivatelov" />
+    <MESSAGE value="opravena sprava uzivatela" />
+    <option name="LAST_COMMIT_MESSAGE" value="opravena sprava uzivatela" />
   </component>
   <component name="WindowStateProjectService">
     <state x="352" y="381" key="#SQL_Dialects" timestamp="1610371148818">
@@ -335,10 +373,10 @@
       <screen x="40" y="0" width="1880" height="1080" />
     </state>
     <state x="481" y="185" key="SettingsEditor/40.0.1880.1080/1952.0.1888.1080@40.0.1880.1080" timestamp="1610560491374" />
-    <state x="568" y="273" key="Vcs.Push.Dialog.v2" timestamp="1610913092088">
+    <state x="568" y="273" key="Vcs.Push.Dialog.v2" timestamp="1610914451082">
       <screen x="32" y="0" width="1888" height="1080" />
     </state>
-    <state x="568" y="273" key="Vcs.Push.Dialog.v2/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610913092088" />
+    <state x="568" y="273" key="Vcs.Push.Dialog.v2/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610914451082" />
     <state x="574" y="273" key="Vcs.Push.Dialog.v2/40.0.1880.1080/1952.0.1888.1080@40.0.1880.1080" timestamp="1610645986972" />
     <state x="875" y="417" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1610457261232">
       <screen x="32" y="0" width="1888" height="1080" />
@@ -348,19 +386,20 @@
       <screen x="32" y="0" width="1888" height="1080" />
     </state>
     <state x="927" y="427" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610460840346" />
-    <state x="277" y="283" width="1313" height="698" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610461397586">
+    <state x="277" y="283" width="1313" height="698" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610969582139">
       <screen x="32" y="0" width="1888" height="1080" />
     </state>
-    <state x="277" y="283" width="1313" height="698" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610461397586" />
+    <state x="277" y="283" width="1313" height="698" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610969582139" />
     <state x="503" y="294" width="880" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610303460779" />
     <state x="793" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610883040511">
       <screen x="32" y="0" width="1888" height="1080" />
     </state>
     <state x="793" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610883040511" />
-    <state x="1941" y="-26" width="1580" height="759" key="dock-window-1" timestamp="1610882010881">
+    <state x="1945" y="0" width="1580" height="759" key="dock-window-1" timestamp="1610973725092">
       <screen x="1952" y="0" width="1888" height="1080" />
     </state>
-    <state x="1941" y="-26" width="1580" height="759" key="dock-window-1/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610882010881" />
+    <state x="1941" y="-26" width="1580" height="759" key="dock-window-1/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610971783994" />
+    <state x="1945" y="0" width="1580" height="759" key="dock-window-1/35.0.1885.1080/1952.0.1888.1080@35.0.1885.1080" timestamp="1610973725092" />
     <state x="638" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1610793350228">
       <screen x="32" y="0" width="1888" height="1080" />
     </state>

@@ -60,8 +60,8 @@ function listFilteredReviews(response) {
             '                                    data-toggle="collapse" data-target="#collapse' + review.id + '"\n' +
             '                                    aria-expanded="false" aria-controls="collapse' + review.id + '">\n' +
             '                                <div class="row my-auto">\n' +
-            '                                    <div class="review-list-user my-auto col-3">' + review.user.name + '</div>\n' +
-            '                                    <div class="review-list-user my-auto col-4">' + review.movie.nazov + '</div>\n' +
+            '                                    <div class="review-list-user my-auto col-4">' + review.user.name + '</div>\n' +
+            '                                    <div class="review-list-user my-auto col-5">' + review.movie.nazov + '</div>\n' +
             '                                    <div class="review-list-movie my-auto  ">' + review.hodnotenie + ' / 5</div>\n' +
             '                                </div>\n' +
             '                            </button>\n' +

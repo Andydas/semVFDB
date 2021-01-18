@@ -11,31 +11,31 @@
         @csrf
         @method($method)
         <div class="form-group">
-            <label for="menoUzivatela">Meno užívateľa</label>
+            <label>Meno užívateľa</label>
             <input type="text" class="form-control" name="name" value="{{ old('name', @$model->name) }}" required>
         </div>
 
         <div class="form-group">
-            <label for="emailUzivatela">Email užívateľa</label>
+            <label>Email užívateľa</label>
             <input type="text" class="form-control" name="email" value="{{ old('email', @$model->email) }}" required>
         </div>
 
         <div class="form-group">
-            <label for="hesloUzivatela">Heslo</label>
+            <label>Heslo</label>
             <input type="password" class="form-control" name="password" value="" required>
         </div>
 
         <div class="form-group">
-            <label for="hesloUzivatelaPotrvdenie">Potvrdenie hesla</label>
+            <label>Potvrdenie hesla</label>
             <input type="password" class="form-control" name="passwordConfirmation" value="" required>
         </div>
 
         <div class="form-group">
-            <label for="rolaUzivatela">Roľa užívateľa</label>
+            <label>Rola užívateľa</label>
             <select class="form-control" name="role" required>
-                <option selected>{{@$model->role}}</option>
-                <option value="user">Užívateľ</option>
-                <option value="admin">Administrátor</option>
+                <option label="Zvoľ rolu" selected>{{@$model->role}}</option>
+                <option value='user'>Užívateľ</option>
+                <option value='admin'>Administrátor</option>
             </select>
         </div>
         <br>

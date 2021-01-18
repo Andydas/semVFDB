@@ -46,6 +46,7 @@ class MovieController extends Controller
     }
 
     public function detail(){
+
     }
     /**
      * Display a listing of the resource.
@@ -163,9 +164,16 @@ class MovieController extends Controller
      */
     public function show(Movie $movie)
     {
+        //dd($movies);
+        $hodnotenie = 0;
+        $pocetHodnoteni = 0;
         $reviews = $movie->reviews()->get();
-        //dd($reviews);
-        return view('movie.detail', ['movie' => $movie, 'reviews' => $reviews]);
+        foreach ($reviews as $review) {
+            $pocetHodnoteni++;
+            $hodnotenie += $review->hodnotenie;
+        }
+        $hodnotenie = $hodnotenie/$pocetHodnoteni;
+        return view('movie.detail', ['movie' => $movie, 'reviews' => $reviews, 'hodnotenie' => $hodnotenie]);
     }
 
     /**

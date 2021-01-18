@@ -5104,7 +5104,6 @@
     <column id="1221" parent="413" name="img">
       <Position>7</Position>
       <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
     <key id="1222" parent="413" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>

@@ -85,3 +85,20 @@ body{
     margin: 0px;
     margin-bottom: 10px;
 }
+
+.movieDetail{
+    margin-bottom: 20px;
+}
+
+.movieImg {
+    height: 300px;
+}
+
+.moviePopis{
+    font-size:18px;
+}
+
+.movieHodnotenie{
+    height: 300px;
+}
+

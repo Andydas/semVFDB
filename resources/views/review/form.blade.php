@@ -16,15 +16,15 @@
         <input type="hidden" id="movie" name="movie" value="{{$movie->id}}">
         @endif
         <div class="form-group">
-            <label for="popisFilmu">Popis hodnotenia</label>
+            <label>Popis hodnotenia</label>
             <textarea class="form-control" rows="4" name="popis" required>{{old('popis', @$model->popis)}} </textarea>
         </div>
 
 
         <div class="form-group">
-            <label for="hodnotenie">Hodnotenie</label>
+            <label>Hodnotenie</label>
             <select class="form-control" name="hodnotenie" required>
-                <option selected>{{@$model->hodnotenie}}</option>
+                <option label="Zvoľ Hodnotenie" selected>{{@$model->hodnotenie}}</option>
                 <option>0</option>
                 <option>1</option>
                 <option>2</option>

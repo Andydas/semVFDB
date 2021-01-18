@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Vitaj')
+
 @section('content')
     <div class="container">
         <div class="jumbotron text-left transparent">

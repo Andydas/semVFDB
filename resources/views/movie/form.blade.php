@@ -12,14 +12,14 @@
         @csrf
         @method($method)
         <div class="form-group">
-            <label for="nazovFilmu">Názov filmu</label>
+            <label>Názov filmu</label>
             <input type="text" class="form-control" name="nazov" value="{{ old('nazov', @$model->nazov) }}" required>
         </div>
 
         <div class="form-group">
-            <label for="zanerFilmu">Žáner filmu</label>
+            <label>Žáner filmu</label>
             <select class="form-control" name="zaner" required>
-                <option selected>{{@$model->zaner}}</option>
+                <option selected label="Zvoľ žáner">{{@$model->zaner}}</option>
                 <option>akcny</option>
                 <option>scifi</option>
                 <option>horror</option>
@@ -27,12 +27,12 @@
         </div>
 
         <div class="form-group">
-            <label for="popisFilmu">Popis filmu</label>
+            <label>Popis filmu</label>
             <textarea class="form-control" rows="4" name="popis" required>{{old('popis', @$model->popis)}} </textarea>
         </div>
 
         <div class="form-group">
-            <label for="obrazokFilmu " >Obrázok filmu</label>
+            <label>Obrázok filmu</label>
             <input type="text" class="form-control" name="img" value="{{old('img', @$model->img)}}">
         </div>
         <br>
