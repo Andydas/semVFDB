@@ -56,7 +56,7 @@ function listFilteredReviews(response) {
         newHTML += '<div class="card highlighted review ">\n' +
             '                    <div class="card-header" id="heading' + review.id + '">\n' +
             '                        <h2 class="mb-0">\n' +
-            '                            <button class="btn collapsed btn-review btn-link btn-block text-left" type="button"\n' +
+            '                            <button class="btn collapsed btn-review btn-block text-left" type="button"\n' +
             '                                    data-toggle="collapse" data-target="#collapse' + review.id + '"\n' +
             '                                    aria-expanded="false" aria-controls="collapse' + review.id + '">\n' +
             '                                <div class="row my-auto">\n' +

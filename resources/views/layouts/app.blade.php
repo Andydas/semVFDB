@@ -104,7 +104,7 @@
 <footer>
     <br>
     <br>
-    <p class="text-center">© VFDB 2020</p>
+    <p class="text-center " >© VFDB 2020</p>
     <br>
 
 </footer>
