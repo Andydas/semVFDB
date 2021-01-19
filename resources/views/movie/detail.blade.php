@@ -22,8 +22,11 @@
             </div>
 
             <div class="movieHodnotenie col-12 col-lg-3 d-flex align-items-center justify-content-center">
+            @if($hodnotenie == 0)
+                <h1>-/5</h1>
+                @else
                 <h1>{{number_format(round($hodnotenie, 1),1)}}/5</h1>
-
+@endif
             </div>
 
             <br>
@@ -52,6 +55,7 @@
         </div>
             <div class="accordion" id="accordionExample">
 
+                @if($reviews != null)
                 <?php
                 $inc = 0;
                 ?>
@@ -106,10 +110,11 @@
                     $inc++;
                     ?>
                 @endforeach
+
+@endif
             </div>
 
         </div>
-
 
 
 @endsection

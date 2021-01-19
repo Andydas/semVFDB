@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b7aeaac2-1f1e-44d0-941d-b3e86b44b8ee" name="Default Changelist" comment="asi finalny commitpred obhajobou">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/filterReviewsAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/filterReviewsAjax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/movie/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/detail.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +208,7 @@
       <workItem from="1610554531282" duration="81094000" />
       <workItem from="1610874978300" duration="21188000" />
       <workItem from="1610966496599" duration="5197000" />
-      <workItem from="1610971758476" duration="8621000" />
+      <workItem from="1610971758476" duration="11345000" />
     </task>
     <task id="LOCAL-00001" summary="Pridany model recenzie, autorizacia, drobne vylepsienia">
       <created>1610480747642</created>
@@ -274,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611047092819</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="asi finalny commitpred obhajobou">
+      <created>1611050604567</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611050604567</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,11 +368,11 @@
       <screen x="40" y="0" width="1880" height="1080" />
     </state>
     <state x="481" y="185" key="SettingsEditor/40.0.1880.1080/1952.0.1888.1080@40.0.1880.1080" timestamp="1610560491374" />
-    <state x="570" y="273" key="Vcs.Push.Dialog.v2" timestamp="1611047094888">
+    <state x="570" y="273" key="Vcs.Push.Dialog.v2" timestamp="1611050605843">
       <screen x="35" y="0" width="1885" height="1080" />
     </state>
     <state x="568" y="273" key="Vcs.Push.Dialog.v2/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610914451082" />
-    <state x="570" y="273" key="Vcs.Push.Dialog.v2/35.0.1885.1080/1952.0.1888.1080@35.0.1885.1080" timestamp="1611047094888" />
+    <state x="570" y="273" key="Vcs.Push.Dialog.v2/35.0.1885.1080/1952.0.1888.1080@35.0.1885.1080" timestamp="1611050605843" />
     <state x="574" y="273" key="Vcs.Push.Dialog.v2/40.0.1880.1080/1952.0.1888.1080@40.0.1880.1080" timestamp="1610645986972" />
     <state x="875" y="417" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1610457261232">
       <screen x="32" y="0" width="1888" height="1080" />

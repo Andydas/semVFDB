@@ -164,15 +164,25 @@ class MovieController extends Controller
      */
     public function show(Movie $movie)
     {
-        //dd($movies);
+        //dd($movie);
+        if  ($movie->reviews() == null){
+            echo('djalskdas');
+        }
         $hodnotenie = 0;
         $pocetHodnoteni = 0;
         $reviews = $movie->reviews()->get();
-        foreach ($reviews as $review) {
-            $pocetHodnoteni++;
-            $hodnotenie += $review->hodnotenie;
+
+            foreach ($reviews as $review) {
+                $pocetHodnoteni++;
+                $hodnotenie += $review->hodnotenie;
+            }
+            if  ($hodnotenie != 0)
+            $hodnotenie = $hodnotenie/$pocetHodnoteni;
+
+
+        if ($hodnotenie == 0) {
+            $reviews = null;
         }
-        $hodnotenie = $hodnotenie/$pocetHodnoteni;
         return view('movie.detail', ['movie' => $movie, 'reviews' => $reviews, 'hodnotenie' => $hodnotenie]);
     }
 
