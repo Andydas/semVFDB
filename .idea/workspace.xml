@@ -19,39 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7aeaac2-1f1e-44d0-941d-b3e86b44b8ee" name="Default Changelist" comment="opravena sprava uzivatela">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/27366aa2-788b-4c26-b16c-f6fd2b7b1c94.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/27366aa2-788b-4c26-b16c-f6fd2b7b1c94.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShowController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Show.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
+    <list default="true" id="b7aeaac2-1f1e-44d0-941d-b3e86b44b8ee" name="Default Changelist" comment="zvalidovane, dorobeny detail filmu, opravena diakritika, vylepsene drobnosti,">
+      <change beforePath="$PROJECT_DIR$/resources/js/deleteReviewsAjax.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/filterReviewsAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/filterReviewsAjax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/error.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/error.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/movie/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/movie/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/movie/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/movie/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/movie/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/movie/reviewlist.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/movie/success.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie/success.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/review/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/review/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/review/detail.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/review/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/review/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/review/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/review/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/review/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/review/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/review/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/success.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/success.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +207,7 @@
       <workItem from="1610554531282" duration="81094000" />
       <workItem from="1610874978300" duration="21188000" />
       <workItem from="1610966496599" duration="5197000" />
-      <workItem from="1610971758476" duration="6236000" />
+      <workItem from="1610971758476" duration="6960000" />
     </task>
     <task id="LOCAL-00001" summary="Pridany model recenzie, autorizacia, drobne vylepsienia">
       <created>1610480747642</created>
@@ -288,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610914449721</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="zvalidovane, dorobeny detail filmu, opravena diakritika, vylepsene drobnosti,">
+      <created>1610987965345</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1610987965345</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +290,9 @@
     <MESSAGE value="pridany filter filmov, upravene listovanie recenzii, filter recenzii, implementacia AJAX(search, delete recenzie)" />
     <MESSAGE value="vyladeny ajax, pridana sprava uzivatelov" />
     <MESSAGE value="opravena sprava uzivatela" />
-    <option name="LAST_COMMIT_MESSAGE" value="opravena sprava uzivatela" />
+    <MESSAGE value="dorobeny detail filmu, opravena diakritika, vylepsene drobnosti" />
+    <MESSAGE value="zvalidovane, dorobeny detail filmu, opravena diakritika, vylepsene drobnosti," />
+    <option name="LAST_COMMIT_MESSAGE" value="zvalidovane, dorobeny detail filmu, opravena diakritika, vylepsene drobnosti," />
   </component>
   <component name="WindowStateProjectService">
     <state x="352" y="381" key="#SQL_Dialects" timestamp="1610371148818">
@@ -373,10 +352,11 @@
       <screen x="40" y="0" width="1880" height="1080" />
     </state>
     <state x="481" y="185" key="SettingsEditor/40.0.1880.1080/1952.0.1888.1080@40.0.1880.1080" timestamp="1610560491374" />
-    <state x="568" y="273" key="Vcs.Push.Dialog.v2" timestamp="1610914451082">
-      <screen x="32" y="0" width="1888" height="1080" />
+    <state x="570" y="273" key="Vcs.Push.Dialog.v2" timestamp="1610987970484">
+      <screen x="35" y="0" width="1885" height="1080" />
     </state>
     <state x="568" y="273" key="Vcs.Push.Dialog.v2/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610914451082" />
+    <state x="570" y="273" key="Vcs.Push.Dialog.v2/35.0.1885.1080/1952.0.1888.1080@35.0.1885.1080" timestamp="1610987970484" />
     <state x="574" y="273" key="Vcs.Push.Dialog.v2/40.0.1880.1080/1952.0.1888.1080@40.0.1880.1080" timestamp="1610645986972" />
     <state x="875" y="417" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1610457261232">
       <screen x="32" y="0" width="1888" height="1080" />
@@ -391,10 +371,11 @@
     </state>
     <state x="277" y="283" width="1313" height="698" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610969582139" />
     <state x="503" y="294" width="880" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/36.0.1884.1080/1952.0.1888.1080@36.0.1884.1080" timestamp="1610303460779" />
-    <state x="793" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610883040511">
-      <screen x="32" y="0" width="1888" height="1080" />
+    <state x="795" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610987884287">
+      <screen x="35" y="0" width="1885" height="1080" />
     </state>
     <state x="793" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/32.0.1888.1080/1952.0.1888.1080@32.0.1888.1080" timestamp="1610883040511" />
+    <state x="795" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/35.0.1885.1080/1952.0.1888.1080@35.0.1885.1080" timestamp="1610987884287" />
     <state x="1945" y="0" width="1580" height="759" key="dock-window-1" timestamp="1610973725092">
       <screen x="1952" y="0" width="1888" height="1080" />
     </state>

@@ -33,7 +33,7 @@ function filterReviews() {
     var x = document.getElementById('searchReview');
 
     let vstup = x.value;
-    console.log("Vystup je: \"" + vstup + "\"");
+    //console.log("Vystup je: \"" + vstup + "\"");
 
     $.ajax({
         url: '/review/filter/',
